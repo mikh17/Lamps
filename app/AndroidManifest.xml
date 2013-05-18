@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.luxoft.lamps"
+    android:versionCode="1"
+    android:versionName="0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:name="com.luxoft.lamps.core.LApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.luxoft.lamps.activities.AcSplash"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.luxoft.lamps.activities.AcMain" >
+        </activity>
+
+        <service android:name="com.luxoft.lamps.core.SessionService" />
+
+        <provider
+            android:name="com.luxoft.lamps.storage.LampsProvider"
+            android:authorities="com.luxoft.lamps"
+            android:exported="false" >
+        </provider>
+    </application>
+
+</manifest>
