@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:paddingBottom="50dip"
-        android:scaleType="fitXY"
+        android:scaleType="centerInside"
+        android:src="@drawable/im_logo"
         >
     </ImageView>
 
@@ -24,6 +25,6 @@
         android:gravity="center"
         android:text="@string/app_version"
         android:textColor="#333333"
-        android:textSize="10sp" />
+        android:textSize="12sp" />
 
 </RelativeLayout>
